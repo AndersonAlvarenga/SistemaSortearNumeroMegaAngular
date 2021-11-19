@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pagina Sorteio</title>
+</head>
+<body>
+  <form #formpost="ngForm" (ngSubmit)="onSubmit(formpost)">
+      <div class="form-group">
+        <h2>Adicione os Números para o Sorteio</h2>
+        <input id="input" type="text" name="valor" [(ngModel)]="valor" class="form-control" (onchange)="onSubmit(formpost)">
+       </div>
+        
+   </form>
+  <div id="quant">
+    <label>Quantidade de Numeros: </label>
+    {{ListaNumeros.length}}
+  </div>
+  <div class="listNuber" *ngIf="ListaNumeros.length != 0">
+
+    <label id="label" *ngFor="let numero of ListaNumeros">
+      {{numero}} <label> </label>
+    </label>
+    <div class="row">
+      <div class="col-xs-6">
+        <button class="btn btn-block btn-danger" (click)="this.apagar()">Apagar</button>
+      </div>
+      <div class="col-xs-6">
+        <button class="btn btn-block btn-danger" (click)="this.limpar()">Limpar Lista</button>
+      </div>
+      <div class="col-xs-6">
+        <button class="btn btn-block btn-danger" (click)="this.sortear()">Sortear</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="NumerosSorteados" *ngIf="ListaResposta.length != 0">
+    <h3>Números Sorteados: </h3>
+    <label id="label" *ngFor="let numero of ListaResposta">
+      {{numero}} <label> </label>
+    </label>
+  </div>
+
+
+</body>
+</html>

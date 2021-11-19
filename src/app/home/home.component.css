@@ -1,0 +1,38 @@
+.form-group {
+  text-align: center;
+}
+
+#input {
+  width: 50%;
+  text-align: center;
+  margin-left: 25%
+}
+.listNuber {
+  margin-top: 20px;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+form{
+    padding-bottom: 30px;
+}
+#quant{
+    font-size: 20px;
+}
+#label{
+    margin-bottom: 10px;
+}
+.col-xs-6{
+    padding-left: 5px;
+}
+.row{
+    padding-left: 60%;
+    left: 5%;
+}
+.NumerosSorteados{
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center
+}
